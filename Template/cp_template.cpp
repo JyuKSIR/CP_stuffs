@@ -7,8 +7,8 @@ using namespace std;
 #define vt vector
 #define pb push_back
 #define mp make_pair
-#define first(a) (a).begin()
-#define last(a) (a).end()
+#define f(a) (a).begin()
+#define l(a) (a).end()
 #define full(a) (a).begin(), (a).end()
 #define sort(a) sort(full(a))
 #define each(x,b) for (auto &x : b)
