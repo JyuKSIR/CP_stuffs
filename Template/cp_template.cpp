@@ -14,8 +14,8 @@ using namespace std;
 #define each(x,b) for (auto &x : b)
 #define max(c,d) (c>d?c:d)
 #define min(c,d) (c<d?c:d)
-#define yes cout<<"YES"<<endl
-#define no cout<<"NO"<<endl
+#define yes cout<<"YES"<<"\n"
+#define no cout<<"NO"<<"\n"
 
 void solve(){
 
