@@ -12,8 +12,6 @@ using namespace std;
 #define full(a) (a).begin(), (a).end()
 #define sort(a) sort(full(a))
 #define each(x,b) for (auto &x : b)
-#define max(c,d) (c>d?c:d)
-#define min(c,d) (c<d?c:d)
 #define yes cout<<"YES"<<"\n"
 #define no cout<<"NO"<<"\n"
 
