@@ -4,13 +4,14 @@ using namespace std;
 
 #define time_now chrono::high_resolution_clock::now()
 
+const int vertices = 5000;
+int directed_graph[vertices][vertices]={};
+
 int main(){
     
     auto start = time_now;
 
-    int vertices = 1000, x=3, a=0 , sum_of_out_degree=0, sum_of_in_degree=0;
-
-    int directed_graph[vertices][vertices]={};
+    int x=3, a=0 , sum_of_out_degree=0, sum_of_in_degree=0;
 
     for(int i=0; i<vertices; i++){
 
@@ -41,8 +42,10 @@ int main(){
 
         }
     }
+    
+    cout << "Number of vertices: " << vertices << "\n";
 
-    cout << "\nSum of in degrees: " << sum_of_in_degree << "\n";
+    cout << "Sum of in degrees: " << sum_of_in_degree << "\n";
 
     cout << "Sum of out degrees: " << sum_of_out_degree << "\n";
 
