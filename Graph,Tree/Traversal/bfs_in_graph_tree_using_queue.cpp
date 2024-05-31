@@ -128,7 +128,7 @@ int main(){
 
     //starting the breadth first search/level order search
 
-    bfs(0);
+    bfs(0); //starting vertex = 0
 
     //level of each vertex;
 
