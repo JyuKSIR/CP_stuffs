@@ -98,7 +98,7 @@ int main(){
     int vertices,edges;
 
     cin >> vertices >> edges;
-
+    //taking input of the graph/tree
     for(int i=0; i<edges; i++){
 
         int vertex1;
