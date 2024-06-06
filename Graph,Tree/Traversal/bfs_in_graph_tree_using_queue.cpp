@@ -53,6 +53,8 @@ vector<vector<int>> graph(N);
 
 vector<int> level(N);
 
+vector<int> parent(N);
+
 
 void bfs(int starting_vertex){
 
@@ -80,7 +82,9 @@ void bfs(int starting_vertex){
 
                 visited[child_vertex] = 1;
 
-                level[child_vertex] = level[current_vertex] + 1;
+                parent[child_vertex] = current_vertex; //child_vertex = child , current_vertex = parent
+
+                level[child_vertex] = level[current_vertex] + 1; //child_vertex = child , current_vertex = parent, level of child vertex is level of parent vertex + 1 
 
             }
         }
