@@ -1,3 +1,5 @@
+//https://cses.fi/problemset/task/1667/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -7,6 +9,8 @@ vector<int> visited,par,lev;
 
 
 #define dbg(a) cerr<<__LINE__<<" no. line: "<<#a<<" = "<<a<<endl
+
+//find the parent and child index by par and store the bfs in a b_f_s vector
 
 vector<int> bfs(int parent){
 
@@ -53,6 +57,7 @@ void solve(){
     int n,m,flag=0,temp=0;
     cin >> n >> m;
 
+    //resize as the input
     graph.resize(n + 1);
     visited.resize(n + 1, 0);
     par.resize(n + 1, 0);
@@ -67,6 +72,8 @@ void solve(){
     }
 
     check = bfs(1);
+
+    //if n is found in b_f_s it means there is a root between them and it is possible so flag++
     
     for(int i=0; i<check.size(); i++){
 
@@ -75,15 +82,16 @@ void solve(){
             flag++;
         }
     }
+    
     if(flag==1){
 
         for(int i=n; i>=1; i=temp){
 
-            ans.push_back(i);
+            ans.push_back(i); //working with the par ,i starting from n, and storng the parents in temp and making i the parent and search again to find the route
 
             temp = par[i];
         }
-        reverse(ans.begin(),ans.end());
+        reverse(ans.begin(),ans.end()); // reverse the route
 
         cout << ans.size() << "\n";
 
