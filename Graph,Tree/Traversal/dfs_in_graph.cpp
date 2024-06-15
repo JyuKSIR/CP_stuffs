@@ -110,7 +110,11 @@ int main(){
     }
     //Depth first search in the graph;
     //let the dfs in graph starts with node: 0
-    dfs_function(0);
+    for(int i=0; i<nodes; i++){
+        if(!vis[i]){
+            dfs_function(i);
+        }
+    }
     cout << "dfs order: ";
     for(int y : dfs_order){
         cout << y << " ";
