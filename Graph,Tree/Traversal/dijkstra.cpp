@@ -19,6 +19,27 @@
 // -->https://www.youtube.com/watch?v=EFg3u_E6eHU
 // -->https://www.youtube.com/watch?v=F3PNsWE6_hM&t=57s
 
+//**input**
+// 7 11 1 2
+// 1 3 3
+// 1 6 2
+// 3 6 2
+// 3 4 4
+// 3 5 1
+// 4 2 1
+// 5 2 2
+// 5 6 3
+// 6 7 5
+// 7 2 2
+// 6 2 6
+// **output**
+// The dijkstra traversal order: 1 6 3 5 5 2 4 7 2 
+// Taken shortest time from node 1 to 2 is: 6
+
+// references
+// -->https://www.youtube.com/watch?v=EFg3u_E6eHU
+// -->https://www.youtube.com/watch?v=F3PNsWE6_hM&t=57s
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -31,6 +52,8 @@ vector<pair<int,int>> g[N]; // while storing the graph --> node first,weight sec
 
 int dijkstra(int source, int dest){
 
+    cout << "The dijkstra traversal order: ";
+
     vector<int> vis(N,0); //making visited array elements 0
     vector<int> dist(N,INF); // making the distance infinite
 
@@ -40,7 +63,6 @@ int dijkstra(int source, int dest){
     dist[source] = 0;
 
     while(!st.empty()){
-        cout << "the order: ";
         auto node = *st.begin();
         int n_dist = node.first;
         int n = node.second;
@@ -85,7 +107,7 @@ freopen("output.txt", "w", stdout);
   
   int ans = dijkstra(s,t);
 
-  cout <<"\nTaken shortest time from node: " << s << "to " << t << "is: " << ans;
+  cout <<"\nTaken shortest time from node " << s << " to " << t << " is: " << ans;
 
   return 0;
 }
