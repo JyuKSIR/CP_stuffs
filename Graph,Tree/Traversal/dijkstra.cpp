@@ -90,4 +90,4 @@ freopen("output.txt", "w", stdout);
 
   return 0;
 }
-// when 2 ≤ n ≤ 1e6, 0 ≤ m ≤ 1e6 and 1 ≤ x, y ≤ n, 1 ≤ wt ≤ 1e7 the INF value should be 1e14 else it wll be wrong cause 1e6*1e7 = 1e13 paths
+// when 2 ≤ n ≤ 1e6, 0 ≤ m ≤ 1e6 and 1 ≤ x, y ≤ n, 1 ≤ wt ≤ 1e7 the INF value will be more than (n-1)*w = (1e6-1)*1e7 = 1e13 so INF value shuld be 1e14
