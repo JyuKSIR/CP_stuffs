@@ -12,27 +12,6 @@
 // 7 2 2
 // 6 2 6
 // **output**
-// the order: 1 6 3 5 5 2 4 7 2 
-// Taken shortest time from node s to t is: 6
-
-// references
-// -->https://www.youtube.com/watch?v=EFg3u_E6eHU
-// -->https://www.youtube.com/watch?v=F3PNsWE6_hM&t=57s
-
-//**input**
-// 7 11 1 2
-// 1 3 3
-// 1 6 2
-// 3 6 2
-// 3 4 4
-// 3 5 1
-// 4 2 1
-// 5 2 2
-// 5 6 3
-// 6 7 5
-// 7 2 2
-// 6 2 6
-// **output**
 // The dijkstra traversal order: 1 6 3 5 5 2 4 7 2 
 // Taken shortest time from node 1 to 2 is: 6
 
