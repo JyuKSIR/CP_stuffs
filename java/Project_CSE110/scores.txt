@@ -1,0 +1,7 @@
+junaed	9	Chemistry	9
+junaed	12	Math	0
+tashdid	10	Biology	6
+tashdid	11	Math	0
+baal	9	Chemistry	1
+baal	9	Physics	0
+baal	9	Biology	1
