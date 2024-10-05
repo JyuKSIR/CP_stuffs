@@ -18,3 +18,5 @@ int main(){
     }
     cout << "count of divisors: " << ct << " Sum: " << sum << "\n";
 }
+
+// time complexity O(sqrt(n))
