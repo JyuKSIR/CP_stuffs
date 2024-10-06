@@ -1,3 +1,8 @@
+// https://www.youtube.com/watch?v=uaF4HvRrW08 --> by prime factorization can understand the basic theorem
+
+// ---> by sieve
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
