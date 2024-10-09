@@ -7,6 +7,22 @@ int gcd(int a, int b){
   return gcd(b, a%b);
 }
 
+int lcm(int a, int b){
+  return (a*b)/gcd(a,b);
+}
+
+int gcd_ternary(int a,int b){
+  return b ? gcd(b, a%b) : a;
+}
+
+int gcd_nonrecursive(int a, int b){
+  while(b){
+    a %= b;
+    swap(a,b);
+  }
+  return a;
+}
+
 int main(){
   cout << gcd(12,18) <<"\n";
   cout << "LCM: " << 12*18 / gcd(12,18);
