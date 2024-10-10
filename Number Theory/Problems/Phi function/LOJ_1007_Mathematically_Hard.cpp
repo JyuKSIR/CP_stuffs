@@ -48,7 +48,8 @@ int main() {
     cin >> t; 
     for (int i = 1; i <= t; i++) {
         cin >> a >> b;
-        cout << "Case " << i << ": " << sum[b] - sum[a-1] << "\n";
+        cout << "Case " << i << ": " << (sum[b] - sum[a-1]) << "\n";
     }
+
     return 0;
 }
