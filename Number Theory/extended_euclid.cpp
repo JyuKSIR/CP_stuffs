@@ -1,4 +1,6 @@
 // https://www.youtube.com/watch?v=6KmhCKxFWOs  --> the implementation how it works
+// https://www.youtube.com/watch?v=7I92alYuF2M  --> bezout's identity 
+// Extended euclid algorithm is a way to find bezout's coefficients
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -25,7 +27,7 @@ int main(){
     cin.tie(0);
     cout.tie(0);
 
-    long long a,b,s,t;
+    long long a,b,s,t;    // here s,t is bezout's coefficient
 
     a = 56;
     b = 15;
