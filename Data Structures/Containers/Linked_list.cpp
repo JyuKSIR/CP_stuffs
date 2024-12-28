@@ -54,6 +54,17 @@ struct LinkedList{
         }
         cout << "null" << "\n";
     }
+    void searching(int key){
+        Node* temp = head;
+        while(temp != nullptr){
+            if(temp -> data == key){
+                cout << "Found" << "\n";
+                return;
+            }
+            temp = temp -> next;
+        }
+        cout << "Not Found" << "\n";
+    }
 };
 
 int main(){
