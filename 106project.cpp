@@ -13,8 +13,8 @@ int main() {
     srand(time(0));
 
     for (int i=1; i<=N; i++) {
-        for (int j=i; j<=N; j++) {
-                ar[i][j] = ar[j][i] = rand() % 6;
+        for (int j=1; j<=N; j++) {
+                if(i<=j) ar[i][j] = ar[j][i] = rand() % 6;
         }
     }
 
@@ -34,13 +34,12 @@ int main() {
             }
         }
     }
+	clock_t end_time = clock();
 
     printf("Number of edges: %lld\n", edge);
     printf("Sum of degrees: %lld\n", sumdeg);
 
 	(sumdeg == 2*edge) ? printf("Handshaking theorum holds\n") : printf("Handshaking theorum didn't hold\n");
-
-	clock_t end_time = clock();
 
     double execution_time_ms = ((double)(end_time - start_time) / CLOCKS_PER_SEC) * 1000;
 
