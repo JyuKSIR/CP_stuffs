@@ -9,7 +9,7 @@ using ordered_set = tree<num_t, null_type, less<num_t>, rb_tree_tag, tree_order_
 
 #define ll long long
 #define ld long double
-#define dbg(a) cerr<<__LINE__<<" no. line: "<<#a<<" = "<<a<<endl
+#define dbg(a) cerr << __LINE__ << " no. line: " << #a << " = " << a << "\n"
 
 void solve(){
 
