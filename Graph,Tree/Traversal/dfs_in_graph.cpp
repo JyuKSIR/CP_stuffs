@@ -75,6 +75,7 @@ vector<int> dfs_order;
 
 void dfs_function(int node){
     cout << "order: " <<node << "\n";
+    dfs_order.push_back(node);
     vis[node]=1;
     for(int child : graph[node]){
         cout<<"parent: "<<node<<" child: "<<child<<"\n";
@@ -82,7 +83,6 @@ void dfs_function(int node){
             dfs_function(child);
         }  
     }
-    dfs_order.push_back(node);
 }
 
 int main(){
