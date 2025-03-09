@@ -36,6 +36,7 @@ int main(){
     }
 
     function<void(int)> dfs = [&](int x){
+        dfso.push_back(x);
         cur_cc.push_back(x);
         vis[x] = 1;
         for(auto y : g[x]){
@@ -43,7 +44,6 @@ int main(){
                 dfs(y);
             }
         }
-        dfso.push_back(x);
     };
     for(int i = 1; i <= n; i++){
         if(!vis[i]){
