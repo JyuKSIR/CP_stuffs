@@ -74,3 +74,5 @@ int main(){
 
   return 0;
 }
+
+// had to print the values of largest scc and it's size
