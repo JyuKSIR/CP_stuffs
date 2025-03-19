@@ -15,7 +15,6 @@ int main() {
     }
 
     function<void(int, int)> dfs = [&](int s, int p) {
-        d[s] = d[p] + 1; // depth setting
         anc[s][0] = p; // First node parent (2^0 = 1)
         for(int j = 1; j < lg; j++) {
             if(anc[s][j - 1] == -1) {
@@ -26,7 +25,10 @@ int main() {
         }
 
         for(auto c : t[s]) {
-            dfs(c, s);
+            if( c != p){
+                d[c] = d[s] + 1;
+                dfs(c, s);
+            }
         }
     };
 
