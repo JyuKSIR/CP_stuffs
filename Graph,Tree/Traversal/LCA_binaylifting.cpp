@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int lg = 4;
+const int lg = 4; //log2(2*10^5)
 
 int main() {
     int n, m; cin >> n >> m;
@@ -20,7 +20,7 @@ int main() {
             if(anc[s][j - 1] == -1) {
                 anc[s][j] = -1;
             } else {
-                anc[s][j] = anc[anc[s][j - 1]][j - 1]; // Parent of parent
+                anc[s][j] = anc[anc[s][j - 1]][j - 1]; // Parent of parent 2^j
             }
         }
 
