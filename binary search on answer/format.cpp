@@ -18,7 +18,7 @@ void solve(){
 	int l=0,r=n;
 	while(l<=r){
 		int mid = (r+l)/2;
-		if(f(mid,k)) r = mid-1;
+		if(f(mid,k)) r = mid-1; // vice varca
 	    else l = mid+1;	
 	}
 	cout << r << "\n";
