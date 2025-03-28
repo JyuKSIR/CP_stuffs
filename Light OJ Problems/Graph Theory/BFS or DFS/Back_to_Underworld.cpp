@@ -49,12 +49,12 @@ void solve(){
                 if(!vis[c]){
                     q.push(c);
                     vis[c] = 1;
-                    if(col[p] == 1){
+                    if(col[p] == 1){  // if parent is vamp then child will be lykans
                         col[c] = 2;
                         ly++;
                     }
                     else{
-                        col[c] = 1;
+                        col[c] = 1;  // if parents is lykans the child will be vamps
                         va++;
                     }
                 }
