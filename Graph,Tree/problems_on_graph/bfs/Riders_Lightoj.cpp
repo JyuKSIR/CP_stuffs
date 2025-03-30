@@ -1,3 +1,8 @@
+// so the plan will be simply run a bfs from every rider and mantain a 2d array of step or every rider there will be one or 
+// multiple indices which will be equal to rider count also maintain a distance array to know the distance of every rider in every indices
+// then just check which indices have the same count as the rider count found the minimum
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -51,7 +56,7 @@ void solve(){
                 if(val(cha,chb)){
                     vis[cha][chb] = 1;
                     loc[cha][chb] = loc[a][b] + 1;
-                    dis[cha][chb] += (loc[cha][chb]+1)/k;
+                    dis[cha][chb] += ceil(1.0*loc[cha][chb]/k);
                     go[cha][chb]++;
                     q.push({cha,chb});
                 }
@@ -64,21 +69,22 @@ void solve(){
         int k = tab[x][y] - '0';
         bfs(x,y,k);
     }
-    
+
+    int c = riders.size();
+    int ans = 1e9;
+
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-            cout << dis[i][j] << " ";
+            if(go[i][j] == c){
+                ans = min(ans,dis[i][j]);
+            }
         }
-        cout << "\n";
-    }
-    cout << "\n";
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
-            cout << go[i][j] << " ";
-        }
-        cout << "\n";
     }
 
+    if(ans == 1e9){
+        cout << "-1\n";
+    }
+    else cout << ans << "\n";
 }
 
 int main(){
@@ -89,7 +95,8 @@ int main(){
 
     int t; cin >> t;
 
-    while(t--){
+    for(int i=1; i<=t; i++){
+       cout << "Case " << i << ": "; 
        solve();
     }
 
