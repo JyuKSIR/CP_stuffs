@@ -2,6 +2,7 @@
 // multiple indices which will be equal to rider count also maintain a distance array to know the distance of every rider in every indices
 // then just check which indices have the same count as the rider count found the minimum
 
+// thanks juni for helping me out
 
 #include<bits/stdc++.h>
 using namespace std;
