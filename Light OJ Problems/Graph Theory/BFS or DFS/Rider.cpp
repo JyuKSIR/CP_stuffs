@@ -1,3 +1,7 @@
+// so the plan will be simply run a bfs from every rider and mantain a 2d array of step or every rider there will be one or 
+// multiple indices which will be equal to rider count also maintain a distance array to know the distance of every rider in every indices
+// then just check which indices have the same count as the rider count found the minimum
+
 #include<bits/stdc++.h>
 using namespace std;
 
