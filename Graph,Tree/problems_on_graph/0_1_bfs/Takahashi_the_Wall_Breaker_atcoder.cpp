@@ -1,5 +1,5 @@
 // this problem is based on 0/1 bfs to find a path if we get '.' we dont need dash or front kick, for '#' he can front kick so
-// for '#' he can go with 1 move and then 2 move thats why two time 
+// for '#' he can go with 1 move and then 2 move thats why two time breaking 1st and 2nd wall
 
 #include<bits/stdc++.h>
 using namespace std;
