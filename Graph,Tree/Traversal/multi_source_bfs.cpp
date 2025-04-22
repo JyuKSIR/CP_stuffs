@@ -44,7 +44,7 @@ void solve(){
             auto [a,b] = q.front();
             q.pop();
 
-            for(int i=0; i<4; i++){
+            for(int i=0; i<8; i++){
                 int ca = a + dx[i];
                 int cb = b + dy[i];
                 if(val(ca,cb)){
