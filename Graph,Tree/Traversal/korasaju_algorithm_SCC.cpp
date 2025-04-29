@@ -88,3 +88,6 @@ int main(){
 
   return 0;
 }
+
+//also can watch this code
+// https://github.com/JyuKSIR/CP_stuffs/blob/main/Graph%2CTree/problems_on_graph/SCC/planets_and_kingdomCSES.cpp
