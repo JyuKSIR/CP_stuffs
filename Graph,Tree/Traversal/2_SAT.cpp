@@ -57,11 +57,11 @@ int main(){
     }
 
     for(int i=0; i<m; i++){
-        if(who[2*i] == who[2*i+1]){
+        if(who[2*i] == who[2*i+1]){  // if x and !x is in the same scc then it's not possible to assign truth values
             cout << "IMPOSSIBLE\n";
             return 0;
         }
-        ans[i] = (who[2*i] > who[2*i+1]) ? '+' : '-';  // if 
+        ans[i] = (who[2*i] > who[2*i+1]) ? '+' : '-';  // if the id of x (even -> 2*i) is more then the id of !x (odd -> 2*i+1) then assign true or else assign false 
     }
 
     for(int i=0; i<m; i++) cout << ans[i] << " ";
