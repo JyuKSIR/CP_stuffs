@@ -19,7 +19,7 @@ void solve(){
     }
 
     for(auto [x,y,z] : v){
-
+        // x v y v z = (x v y) ∧ (x v z) ∧ (y v z)
         vector<array<int,2>> e = {{x,y},{x,z},{y,z}};
 
         for(auto [a,b] : e){
