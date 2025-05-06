@@ -3,7 +3,6 @@ using namespace std;
 
 int main(){
 
-
     int n,m; cin >> n >> m;
     vector<array<int,3>> g;
     int dis[n];
