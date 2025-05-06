@@ -21,7 +21,7 @@ int main(){
 
         priority_queue<array<int, 2>, vector<array<int, 2>>, greater<array<int, 2>>> pq;
 
-        pq.push({0, s});        
+        pq.push({0, s}); // first distance then node       
         dis[s] = 0;
 
         while(!pq.empty()){
