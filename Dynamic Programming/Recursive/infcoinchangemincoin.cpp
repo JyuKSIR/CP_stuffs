@@ -13,13 +13,13 @@ int main(){
     function<int(int)> mincoin = [&](int sum){
         if(sum == 0) return 0;
         if(dp[sum] != -1) return dp[sum];
-        int way = INT_MAX;
+        int ct = INT_MAX;
         for(auto coin : c){
             if(sum - coin >= 0){
-                way = min(way , mincoin(sum - coin) + 1);
+                ct = min(ct , mincoin(sum - coin) + 1);
             }
         }
-        return dp[sum] = way;
+        return dp[sum] = ct;
     };
 
     mincoin(am);
