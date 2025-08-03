@@ -38,3 +38,5 @@ int main(){
   
  return 0;
 }
+// prime factorization by sieve
+// https://www.spoj.com/problems/FACTCG2/
