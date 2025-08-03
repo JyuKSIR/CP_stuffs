@@ -65,8 +65,7 @@ void solve(){
 }
 
 int main(){
-
-
+  
   solve();
   int t; cin >> t;
 
