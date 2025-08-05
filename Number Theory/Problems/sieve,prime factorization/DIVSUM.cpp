@@ -30,3 +30,5 @@ int main(){
 
  return 0;
 }
+TC - nlog(n) + n
+// https://www.spoj.com/problems/DIVSUM/
