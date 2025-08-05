@@ -18,3 +18,4 @@ int main(){
         cout << x << " ";
     }
 }
+TC - O(sqrt(n))
