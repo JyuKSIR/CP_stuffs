@@ -34,3 +34,4 @@ int main(){
     printf("%d ", mn);
     return 0;
 }
+// https://coderoj.com/problems/min-substring
