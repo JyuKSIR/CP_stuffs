@@ -64,4 +64,8 @@ int main(){
 
  return 0;
 }
-//https://cses.fi/problemset/task/1647
+TC :-
+  build tree - O(n)
+  point update - O(log(n))
+  range update - O(rlog(n)) [till range r]
+  query - O(log(n))
