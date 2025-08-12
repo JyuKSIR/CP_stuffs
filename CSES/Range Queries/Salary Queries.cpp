@@ -37,3 +37,4 @@ int main(){
 
  return 0;
 }
+O((n+q)log(n))
