@@ -46,5 +46,10 @@ int main() {
  
   return 0;
 }
-
+TC :-
+  Segment Tree with Lazy Propagation:
+- Build: O(N)
+- Update (range): O(log N)
+- Query (range): O(log N)
+- Space: O(N)
 
