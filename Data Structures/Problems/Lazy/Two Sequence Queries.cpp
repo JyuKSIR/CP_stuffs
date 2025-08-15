@@ -115,3 +115,20 @@ int main() {
   return 0;
 }
 // https://atcoder.jp/contests/abc357/tasks/abc357_f
+// t[n][0] = sum of aa in segment
+// t[n][1] = lazy for aa
+// t[n][2] = sum of bb in segment
+// t[n][3] = lazy for bb
+// t[n][4] = sum of aa[i] * bb[i] over the segment
+// // for aa, x = lazy a
+// aa[i] ← aa[i] + x       // for all i in [l,r]
+// (aa[i] + x) * bb[i] = aa[i]*bb[i] + x*bb[i]
+// t[n][0] = (t[n][0] + len * x % mod) % mod;  // sum of aa
+// t[n][1] = (t[n][1] + x) % mod;             // lazy for aa
+// t[n][4] = (t[n][4] + x * t[n][2] % mod) % mod; // sum of aa*bb
+// // for bb, x = lazy b
+// bb[i] ← bb[i] + x       // for all i in [l,r]
+// aa[i] * (bb[i] + x) = aa[i]*bb[i] + x*aa[i]
+// t[n][2] = (t[n][2] + len * x % mod) % mod;  // sum of bb
+// t[n][3] = (t[n][3] + x) % mod;             // lazy for bb
+// t[n][4] = (t[n][4] + x * t[n][0] % mod) % mod; // sum of aa*bb
