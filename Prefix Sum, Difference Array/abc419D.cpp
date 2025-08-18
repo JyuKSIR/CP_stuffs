@@ -20,7 +20,7 @@ int main(){
 
   for(int i = 0; i < n; i++){
     if(da[i] & 1){
-      swap(s1[i],s2[i]);
+      swap(s1[i],s2[i]); //the odd one will swap cause for even its the same s[i] after even moves
     }
   }
   cout << s1;
