@@ -10,7 +10,6 @@ vector<ll> toBase(ll n, int b) {
       pows.push_back(n % b); // remainder is the current digit
       n /= b;                  // move to next place
     }
-    //reverse(pows.begin(), pows.end()); // put in normal order
   }
   return pows;
 }
