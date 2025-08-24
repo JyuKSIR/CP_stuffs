@@ -37,3 +37,5 @@ int main(){
 
  return 0;
 }
+// https://www.youtube.com/watch?v=RF2vLHdk4Rs&t=1054s
+// https://cses.fi/problemset/task/2431/
