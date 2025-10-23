@@ -72,6 +72,9 @@ int main(){
     for(int i = 0; i < n; i++){
         (ar[i] ^= (1 << 6));
     }
-
+    // let a is a number and we want to find msb of a in which index we will write
+    // __lg(a) thats how we got it in integer from
+    // let a = 9 = 1001
+    // here msb in 3rd index it will return 3
   return 0;
 }
