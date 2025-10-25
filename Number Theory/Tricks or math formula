@@ -1,0 +1,23 @@
+# Combinations (nCr)
+# Number of ways to choose r items from n items without considering order
+nCr = n! / (r! * (n-r)!)
+
+# Special Cases:
+nC2 = n! / (2! * (n-2)!) = n*(n-1)/2
+nC3 = n! / (3! * (n-3)!) = n*(n-1)*(n-2)/6
+nC4 = n! / (4! * (n-4)!) = n*(n-1)*(n-2)*(n-3)/24
+
+# Permutations (nPr)
+# Number of ways to choose r items from n items with order considered
+nPr = n! / (n-r)!
+
+# Special Cases:
+nP2 = n! / (n-2)! = n*(n-1)
+nP3 = n! / (n-3)! = n*(n-1)*(n-2)
+nP4 = n! / (n-4)! = n*(n-1)*(n-2)*(n-3)
+
+# combinations
+5C3 = 10 (order doesn’t matter)
+# permutation
+5P3 = 60 (order matters)
+
