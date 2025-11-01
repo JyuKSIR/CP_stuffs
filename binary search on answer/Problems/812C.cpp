@@ -1,50 +1,42 @@
 #include<bits/stdc++.h>
+#define ll long long
+#define ull unsigned long long
+
 using namespace std;
 
-#define ll long long
-#define ld long double
-#define dbg(a) cerr<<__LINE__<<" no. line: "<<#a<<" = "<<a<<endl
+ll cost = 0;
 
-const ll N = 1e5+5;
-ll ar[N];
-ll cost=0;
+bool f(ll m, ll s, ll n, ll a[]){
+  ll c[n];
+  for(int i = 0; i < n; i++){
+    c[i] = (a[i] + (i + 1) * m);
+  }
+  sort(c, c + n);
+  ll sum = 0;
+  for(int i = 0; i < m; i++){
+    sum += c[i];
+  }
+  if(sum <= s){
+    cost = max(sum, cost);
+    return 0;
+  }
+  else return 1;
 
-bool f(ll x,ll y,ll n){
-	ll check[n];
-
-	ll sum=0;
-    for(ll i=0; i<n; i++){
-	    check[i]=(ar[i]+(i+1)*x);	
-	}
-	sort(check,check+n);
-	for(ll i=0; i<x;i++) sum+=check[i];
-    if(sum<=y){
-		cost=max(cost,sum);
-	   	return 0;
-	}
-    else return 1;	
 }
 
-void solve(){
+int main() {
+  cin.tie(0)->sync_with_stdio(0);
 
-    ll n,s; cin >> n >> s;
-    for(ll i=0; i<n; i++) cin >> ar[i];	
-	ll l=0,r=n;
-	while(l<=r){
-		ll m = (l+r)/2;
-	    if(f(m,s,n)) r = m - 1;
-	    else l = m + 1;	
-	}
-	cout << r << " " << cost << "\n";
-}
-
-int main(){
-
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-
-       solve();
-
+  ll n, s; cin >> n >> s;
+  ll a[n];
+  for(int i = 0; i < n; i++) cin >> a[i];
+  int l = 0, r = n;
+  while (l <= r) {
+    int m = (l + r) / 2;
+    if(f(m, s, n, a)) r = m - 1;
+    else l = m + 1;
+  }
+  cout << r << " " << cost << "\n";
+  
   return 0;
 }
