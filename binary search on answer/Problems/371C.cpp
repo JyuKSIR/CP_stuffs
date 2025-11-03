@@ -1,52 +1,45 @@
 #include<bits/stdc++.h>
+#define ll long long
+#define ull unsigned long long
+
 using namespace std;
 
-#define ll long long
-#define ld long double
-#define dbg(a) cerr<<__LINE__<<" no. line: "<<#a<<" = "<<a<<endl
+int main() {
+  cin.tie(0)->sync_with_stdio(0);
 
-ll bc,sc,cc;
-ll kb,ks,kc,pb,ps,pc,mh;
+  string s; cin >> s;
+  ll nb, ns, nc; cin >> nb >> ns >> nc;
+  ll pb, ps, pc; cin >> pb >> ps >> pc;
+  ll r; cin >> r;
+  ll a[3]{};
+  for(auto c : s){
+    if(c == 'B') a[0]++;
+    if(c == 'S') a[1]++;
+    if(c == 'C') a[2]++;
+  }
 
-bool f(ll z){
+  auto f = [&](ll m){
+    ll nnb = m * a[0];
+    ll nns = m * a[1];
+    ll nnc = m * a[2];
+    ll hb = (nnb - nb);
+    ll hs = (nns - ns);
+    ll hc = (nnc - nc);
+    ll cost = 0;
+    if(hb > 0) cost += (hb * pb);
+    if(hs > 0) cost += (hs * ps);
+    if(hc > 0) cost += (hc * pc);
+    if(cost <= r) return 0;
+    else return 1;
+  };
 
-	ll nb=z*bc,ns=z*sc,nc=z*cc;
-	ll nmb=nb-kb,nms=ns-ks,nmc=nc-kc;
-	ll nm=0;
-	if(nmb>0) nm+=pb*nmb;
-	if(nms>0) nm+=ps*nms;
-	if(nmc>0) nm+=pc*nmc;
-	
-    if(nm<=mh) return 0;
-    else return 1;	
-}
-
-void solve(){
-
-   string s; cin >> s;
-   cin >> kb >> ks >> kc >> pb >> ps >> pc >> mh;
-   for(char c:s){
-	   if(c == 'B') bc++;
-	   if(c == 'S') sc++;
-	   if(c == 'C') cc++;   
-   }
-   ll l=1,r=1e13;
-   while(l<=r){
-	   ll m = (r+l)/2;
-	   if(f(m)) r = m-1;
-       else l = m+1;	   
-   }
-   cout << r << "\n";
-
-}
-
-int main(){
-
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-
-       solve();
-
+  ll lo = 0, hi = 1e13;
+  while(lo <= hi){
+    ll m = (lo + hi) / 2;
+    if(f(m)) hi = m - 1;
+    else lo = m + 1;
+  }
+  cout << hi;
+  
   return 0;
 }
