@@ -22,7 +22,7 @@ int main() {
     int mx = *ms.rbegin();
     ans.push_back({mn,mx});
     ms.erase(ms.find(a[i]));
-    if(i + k <= n) ms.insert(a[i + k]);
+    if(i + k < n) ms.insert(a[i + k]);
   }
   for(auto [a,b] : ans) cout << a << " " << b << "\n";
   return 0;
