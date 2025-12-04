@@ -21,3 +21,4 @@ int main() {
   }
   return 0;
 }
+// https://toph.co/arena?practice=6931a8d614df1845b23b4841#!/p/69289cd96ab12aa665e8c9c9
