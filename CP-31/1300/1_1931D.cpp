@@ -2,6 +2,7 @@
 here we can minus b from x because we want a positive ans. and we always do overall mod % x because b itself can be equal to x;
 what will happen then? take the values and do math
 --> (a - b) % x can be written as a % y = b % y
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
