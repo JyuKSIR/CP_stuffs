@@ -23,3 +23,5 @@ nP4 = n! / (n-4)! = n*(n-1)*(n-2)*(n-3)
 
 # Subarray
 * In an n sized array there will be n * (n + 1) / 2 number subarrays.
+# Bitwise
+* if there is a number like x and if you do (x & -x) that gives you the largest number which is a power of two and that number can divide x
