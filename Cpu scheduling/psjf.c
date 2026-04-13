@@ -7,7 +7,7 @@ int main() {
   printf("Enter number of processes: ");
   scanf("%d", &n);
 
-  int at[n], bt[n], rt[n], ct[n], tat[n], wt[n], start[n], end[n];
+  int at[n], bt[n], rt[n], ct[n], tat[n], wt[n], start[n];
 
   for (int i = 0; i < n; i++) {
     printf("Enter Arrival and Burst time for P%d: ", i + 1);
@@ -21,9 +21,15 @@ int main() {
     int min_rt = INT_MAX;
 
     for (int i = 0; i < n; i++) {
-      if (at[i] <= time && rt[i] > 0 && rt[i] < min_rt) {
-        min_rt = rt[i];
-        smallest = i;
+      if (at[i] <= time && rt[i] > 0) {
+        if (rt[i] < min_rt) {
+          min_rt = rt[i];
+          smallest = i;
+        } else if (rt[i] == min_rt) {
+          if (at[i] < at[smallest]) {
+            smallest = i;
+          }
+        }
       }
     }
 
