@@ -1,27 +1,29 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-#define ll long long
+const ll m = 1e9 + 7;
+
+ll binex(ll a, ll b, ll m) {
+  a %= m;
+  ll ans = 1;
+  while (b) {
+    if (b & 1) {
+      ans = ans * a % m;
+    }
+    a = a * a % m;
+    b >>= 1;
+  }
+  return ans;
+}
 
 int main(){
-
-    int a,b; cin >> a >> b;   // a = 4 , b = 15
-    const int m = 1e9+7;
-    function<int(int,int)> expo = [](int a,int b){
-        int ans = 1;
-        while(b){
-            if(b & 1) ans = (ans * 1LL * a) % m;
-            a = (a * 1LL * a) % m;
-            b = b >> 1;
-        }
-        return ans;
-    };
-
-
-    cout << expo(a,b);
-
-  return 0;
+  cin.tie(0)->sync_with_stdio(0);
+  
+  ll n; cin >> n;
+  cout << binex(2, n, m);
 }
+
 
    // b        a      ans
 
