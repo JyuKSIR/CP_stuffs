@@ -1,41 +1,31 @@
-#include<bits/stdc++.h>
-#define ll long long
-
+// https://cses.fi/problemset/task/2431/
+#include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+
+char kthdigit(ll k) {
+  ll dct = 1; // digit count
+  ll s = 1; // statrting of each group
+  ll ct = 9; // number count in each group
+  while (k > dct * ct) {
+    k -= dct * ct;
+    dct++;
+    ct *= 10;
+    s *= 10;
+  }
+  ll digit = s + ((k - 1) / dct);
+  ll in = (k - 1) % dct;
+  string ans = to_string(digit);
+  return ans[in];
+}
 
 int main(){
-
-  auto expo = [](ll a, ll b) -> ll{
-    ll ans = 1;
-    while(b){
-      if(b & 1ll){
-        ans = ans * a;
-      }
-      a = a * a;
-      b >>= 1ll;
-    }
-    return ans;
-  };
-
+  cin.tie(0)->sync_with_stdio(0);
+  
   ll q; cin >> q;
-  while(q--){
+  while (q--) {
     ll n; cin >> n;
-    ll digit = 1, base = 9;
-    while(n > digit * base){
-      n -= (digit * base);
-      base *= 10;
-      digit++;
-    }
-
-    ll extra = (n - 1) / digit;  // n-1 -> 0 based indexing 
-    ll num = expo(10, digit - 1) + extra; // extra -> ekok, doshok, shotok ghorer number
-    ll ind = (n - 1) % digit; // index;
-
-    string s = to_string(num);
-    cout << s[ind] << "\n";
+    cout << kthdigit(n) << '\n';
   }
-
- return 0;
 }
 // https://www.youtube.com/watch?v=RF2vLHdk4Rs&t=1054s
-// https://cses.fi/problemset/task/2431/
